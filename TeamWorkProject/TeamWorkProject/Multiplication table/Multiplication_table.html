@@ -1,0 +1,37 @@
+<!DOCTYPE html>
+<html lang="ru">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Таблица умножения</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <h1 style="text-align: center;">Таблица умножения от 1 до 9</h1>
+    <table>
+        <tr>
+            <th>x</th>
+            <th>1</th>
+            <th>2</th>
+            <th>3</th>
+            <th>4</th>
+            <th>5</th>
+            <th>6</th>
+            <th>7</th>
+            <th>8</th>
+            <th>9</th>
+        </tr>
+        <!-- Генерация строк таблицы -->
+        <script>
+            for (let i = 1; i <= 9; i++) {
+                document.write('<tr>');
+                document.write('<th>' + i +'</th>'); // Первая ячейка с номером строки
+                for (let j = 1; j <= 9; j++) {
+                    document.write('<td>' + (i * j) + '</td>'); // Ячейка с результатом умножения
+                }
+                document.write('</tr>');
+            }
+        </script>
+    </table>
+</body>
+</html>

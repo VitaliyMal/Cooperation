@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Регистрация</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="form-container">
+            <form class="form" action="" method="post">
+                <fieldset>
+                    <legend>Заполните поля:</legend>
+                    <div><input type="email" autofocus name="email" placeholder="E-mail" required></div>
+                    <div><input type="text" name="login" placeholder="Логин" required></div>
+                    <div><input type="text" name="name" placeholder="Имя" required></div>
+                    <div><input type="text" name="second_name" placeholder="Фамилия" required></div>
+                    <div><input type="password" name="password" placeholder="Пароль" required></div>
+                    <div><input type="password" name="password2" placeholder="Повторите пароль" required></div>
+                    <div><input type="date" name="date" required></div>
+                    <div class="error-message" id="errorMessage" style="color: red;"></div>
+                    <div class="button"><button type="submit">Зарегистрироваться</button></div>
+                    <div class="button"><button type="reset">Очистить поля</button></div>
+                    <div class="button"><button type="button" onclick="window.location.href='index.html'">Вернуться</button></div>
+                </fieldset>
+            </form>
+        </div>
+    </header>
+
+    <!-- не работает так как у полей стоит требования required -->
+    <script>
+        document.getElementById('submit').addEventListener('click', function(event){
+            event.preventDefault();
+            const login= document.getElementById('login').value;
+            const name= document.getElementById('name').value;
+            const second_name= document.getElementById('second_name').value;
+            const password= document.getElementById('password').value;
+            const date= document.getElementById('date').value;
+            const email= document.getElementById('email').value;
+
+
+            const errorMessage = document.getElementById('errorMessage');
+
+            if(login===''||name===''||second_name===''|| password===''||date===''||email===''){
+                errorMessage.textContent = 'Ошибка валидации';
+            }
+            else{
+                errorMessage.textContent='';
+                ///валидация успешна идем на другую страницу
+                window.location.href='#';//заглушка
+            }
+        });
+    </script>
+
+</body>
+
+</html>

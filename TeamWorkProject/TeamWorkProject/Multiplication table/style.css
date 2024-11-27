@@ -1,0 +1,21 @@
+table {
+    border-collapse: collapse;
+    width: 50%;
+    margin: 20px auto;
+}
+th, td {
+    border: 1px solid #000;
+    padding: 10px;
+    text-align: center;
+    border-radius: 10px; /* Скругление углов */
+    background-color: #ffffff; /*  цвет ячеек */
+}
+th {
+    background-color: #d6fcac; /* Цвет фона  заголовков */
+}
+td {
+    transition: background-color 0.3s; /* Плавный переход цвета фона */
+}
+td:hover {
+    background-color: #e7f59a; /* Цвет ячейки при наведении */
+}

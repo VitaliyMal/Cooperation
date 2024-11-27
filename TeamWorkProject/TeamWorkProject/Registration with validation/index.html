@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="ru">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Авторизация</title>
+    <!-- Подключение файла CSS -->
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <header>
+        <div class="form-container">
+            <h1>Вход в систему</h1>
+            <form class="form" action="" method="post">
+                <div>
+                    <input id="login" type="text" autofocus name="login" placeholder="Логин" required>
+                </div>
+                <div>
+                    <input id="password" type="password" name="password" placeholder="Пароль" required>
+                </div>
+                <div class="error-message" id="errorMessage" style="color: red;"></div>
+                <div class="button">
+                    <!-- <button id="submit" type="submit">Вход</button> -->
+                    <button id="submit" >Вход</button>
+                </div>
+                <div class="button">
+                    <button type="button" onclick="window.location.href='registration.html'">Регистрация</button>
+                </div>
+            </form>
+        </div>
+    </header>
+
+    <script>
+        document.getElementById('submit').addEventListener('click', function(event){
+            event.preventDefault();
+            const username= document.getElementById('login').value;
+            const password= document.getElementById('password').value;
+            const errorMessage = document.getElementById('errorMessage');
+
+            if(username===''|| password===''){
+                errorMessage.textContent = 'Ошибка валидации';
+            }
+            else{
+                errorMessage.textContent='';
+                ///валидация успешна идем на другую страницу
+                window.location.href='#';//заглушка
+            }
+        });
+    </script>
+
+</body>
+
+</html>

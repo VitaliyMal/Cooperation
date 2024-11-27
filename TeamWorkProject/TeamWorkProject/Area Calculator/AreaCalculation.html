@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+    <!-- Создание выпадающего списка для выбора фигуры -->
+    <div>
+    <p>
+        <label for="selectFigure">Выберите фигуру для расчета площади:</label>
+        <select id="selectFigure" name="selectFigure" onchange="ChooseListElement(this.value)">
+            <option value="triangle">Треугольник</option>
+            <option value="trapezoid">Трапеция</option>
+            <option value="square">Квадрат</option>
+            <option value="circle">Круг</option>
+            <option value="parallelogram">Параллелограм</option>
+        </select>
+    </p>
+    </div>
+
+    <!-- Заполнение формы треугольника -->
+    <div id="triangleForm" style="display: none;">
+
+    </div>
+
+    <!-- Заполнение формы трапеции -->
+    <div id="trapezoidForm" style="display: none;">
+        
+    </div>
+
+    <!-- Заполнение формы квадрата -->
+    <div id="squareForm" style="display: none;">
+        <p>You want square</p>
+    </div>
+
+    <!-- Заполнение формы круга -->
+    <div id="circleForm" style="display: none;">
+        
+    </div>
+
+    <!-- Заполнение формы параллелограмма -->
+    <div id="parallelogramForm" style="display: none;">
+        
+    </div>
+
+    <script src="AreaCalculation.js"></script>
+</body>
+
+</html>
+
+
+
+<!-- <script>
+    function color(color_type){
+        if (color_type == 'blue'){
+            document.getElementById('blue').style.display = 'block';
+            document.getElementById('red').style.display = 'none';
+        } 
+        else{
+            document.getElementById('blue').style.display = 'none';
+            document.getElementById('red').style.display = 'block';
+        }
+    }
+    </script>
+    
+    <select onchange="color(this.value)">
+        <option name="choice1" value="red" >red</option>
+        <option name="choice2" value="blue" >blue</option>
+    </select>
+    
+    <div id="red" style="display:none;">
+        <p>You want RED</p>
+    </div>
+    
+    <div id="blue" style="display:none;">
+        <p>You want BLUE</p>
+    </div> -->

@@ -4,13 +4,13 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
+    <title>AreaCalculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 
 <body>
     <!-- Создание выпадающего списка для выбора фигуры -->
-    <div>
+    <div style="background-color: rgb(188, 188, 197); height: 50px; font-size: 16px;">
     <p>
         <label for="selectFigure">Выберите фигуру для расчета площади:</label>
         <select id="selectFigure" name="selectFigure" onchange="ChooseListElement(this.value)">
@@ -24,29 +24,52 @@
     </div>
 
     <!-- Заполнение формы треугольника -->
-    <div id="triangleForm" style="display: none;">
-
+    <div id="triangleForm" style="display: flex;
+    justify-content: center;flex-wrap: wrap;">
+        <input placeholder="Length of side1" id="triangle side1">
+        <input placeholder="Length of side2" id="triangle side2">
+        <input placeholder="Length of side3" id="triangle side3"><br>
+            <input placeholder="Angle 1 in degrees" id="triangle angle1">
+            <input placeholder="Angle 2 in degrees" id="triangle angle2">
+            <input placeholder="Angle 3 in degrees" id="triangle angle3"><br>
     </div>
 
     <!-- Заполнение формы трапеции -->
-    <div id="trapezoidForm" style="display: none;">
-        
+    <div id="trapezoidForm" style="display: none;
+    justify-content: center;flex-wrap: wrap;">
+            <input placeholder="Length of side1" id="trapezoid side1">
+            <input placeholder="Length of side2" id="trapezoid side2">
+            <input placeholder="Length of side3" id="trapezoid side3">
+            <input placeholder="Length of side4" id="trapezoid side4"><br>
+                <input placeholder="Angle 1 in degrees" id="trapezoid angle1">
+                <input placeholder="Angle 2 in degrees" id="trapezoid angle2">
+                <input placeholder="Angle 3 in degrees" id="trapezoid angle3">
+                <input placeholder="Angle 4 in degrees" id="trapezoid angle4"><br>
     </div>
 
     <!-- Заполнение формы квадрата -->
-    <div id="squareForm" style="display: none;">
-        <p>You want square</p>
+    <div id="squareForm" style="display: none;
+    justify-content: center;flex-wrap: wrap;">
+            <input placeholder="Length of sides" id="Square length of sides">
     </div>
 
     <!-- Заполнение формы круга -->
-    <div id="circleForm" style="display: none;">
-        
+    <div id="circleForm" style="display: none;
+    justify-content: center;flex-wrap: wrap;">
+        <input placeholder="Radius" id="Circle's radius"><br>
     </div>
 
     <!-- Заполнение формы параллелограмма -->
-    <div id="parallelogramForm" style="display: none;">
-        
+    <div id="parallelogramForm" style="display: none;
+    justify-content: center; flex-wrap: wrap;">
+            <input placeholder="Length of first sides" id="Paralellogramm first side length">
+	    <input placeholder="Length of second sides" id="Paralellogramm second side length"><br>
+            <input placeholder="First angle pair in degrees" id="first Paralellogramm pair angles"><br>
     </div>
+    <div id="ButtonContainer" style="display: flex; justify-content: center;">
+        <button style="height: 100px; width: 200px;" onclick="ButtonClick()"> Apply </button>
+    </div>
+  
 
     <script src="AreaCalculation.js"></script>
 </body>
